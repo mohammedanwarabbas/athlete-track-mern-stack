@@ -10,7 +10,7 @@ const {
 
 // Secure endpoint for cron jobs only
 router.post('/seed-workouts', (req, res, next) => {
-    if (req.headers['authorization'] !== `Bearer ${process.env.CRON_SECRET}`) {
+    if (req.query.secret !== process.env.CRON_SECRET) {
         return res.status(403).json({ error: 'Forbidden: Invalid cron token' });
     }
     next();

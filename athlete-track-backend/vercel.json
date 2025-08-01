@@ -1,24 +1,21 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "server.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "server.js"
-      }
-    ],
-    "crons": [
-      {
-        "path": "/api/demo-data/seed-workouts",
-        "schedule": "0 9 * * *",
-        "headers": {
-          "Authorization": "Bearer $CRON_SECRET"
-        }
-      }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/demo-data/seed-workouts?secret=$CRON_SECRET",
+      "schedule": "0 9 * * *"
+    }
+  ]
+}
