@@ -1,0 +1,87 @@
+# ======================
+# Frontend (React/Vite)
+# ======================
+athlete-track-frontend/node_modules/
+athlete-track-frontend/dist/
+athlete-track-frontend/build/
+athlete-track-frontend/.vite/
+athlete-track-frontend/.eslintcache
+athlete-track-frontend/.env*
+athlete-track-frontend/.env.local
+athlete-track-frontend/coverage/
+athlete-track-frontend/.DS_Store
+athlete-track-frontend/*.log*
+athlete-track-frontend/.pnp
+athlete-track-frontend/.pnp.js
+athlete-track-frontend/.cache/
+athlete-track-frontend/.parcel-cache/
+# original images
+athlete-track-frontend/src/assets/images/original files/
+
+# ======================
+# Backend (Node.js)
+# ======================
+athlete-track-backend/node_modules/
+athlete-track-backend/.env*
+athlete-track-backend/logs/
+athlete-track-backend/.nyc_output/
+athlete-track-backend/.npm
+athlete-track-backend/.eslintcache
+athlete-track-backend/*.log*
+athlete-track-backend/.DS_Store
+athlete-track-backend/.node_repl_history
+athlete-track-backend/*.pid
+athlete-track-backend/*.seed
+athlete-track-backend/*.tsbuildinfo
+athlete-track-backend/temp/
+
+# ======================
+# Testing & Coverage
+# ======================
+*.junit
+*.xml
+*.tap
+*.trx
+*.xunit
+test-results/
+coverage/
+.nyc_output/
+
+# ======================
+# Editors & IDEs
+# ======================
+.idea/
+.vscode/
+*.sw?
+*.swo
+*.swn
+.history/
+.fleet/
+*.code-workspace
+
+# ======================
+# System & Environment
+# ======================
+.DS_Store
+*.tgz
+*.tmp
+*.bak
+*.pid
+*.seed
+*.env
+.env.local
+.env.development
+.env.test
+.env.production
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ======================
+# Deployment & Build
+# ======================
+.vercel/
+.next/
+out/
+.serverless/
+.vscode-test/

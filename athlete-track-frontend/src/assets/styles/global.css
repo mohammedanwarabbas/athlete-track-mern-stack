@@ -1,0 +1,115 @@
+/* hero section background iamges */
+:root {
+  --bg11: url("./../images/woman-doing-yoga.jpg");
+  --bg2: url("./../images/women-in-gym.jpeg");
+  --bg3: url("./../images/exercising-man.jpg");
+  --bg1: url("./../images/exercising-man-2.jpg");
+  /* ... */
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+/* footer */
+/* making footer sticked to bottom even for small cotnents */
+/* this might may cause overflow,stikciy elements not working properly */
+.app-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  /* Fix for sticky elements */
+  align-items: start; /* Crucial for sticky */
+  overflow: visible; /* Allow sticky to escape */
+}
+
+/* core features section */
+@keyframes features-icon-animation {
+  0% {
+    transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    transform: translateY(8px) translateX(-50%);
+  }
+  100% {
+    transform: translateY(0) translateX(-50);
+  }
+}
+
+.core-features-card:hover .core-features-icon{
+  animation:features-icon-animation 0.8s ease-in-out infinite;
+}
+
+
+/* hero section */
+.hero-section {
+  /* background-image: url("./../images/women-in-gym.jpeg"); */
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  /* background-blend-mode: soft-light; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  opacity: 1; /* THIS IS THE ONLY CHANGE */
+  animation: bgSwipe 16s infinite;
+}
+
+
+/* Keyframes for swipe animation */
+@keyframes bgSwipe {
+  0%, 30% {
+    background-image: 
+      linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)),
+      var(--bg1);
+  }
+  31%, 33% {
+    background-image: 
+      linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0)),
+      var(--bg1);
+  }
+  34%, 36% {
+    background-image: 
+      linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0)),
+      var(--bg2);
+    background-position: 30% center; /* Smoother entry */
+  }
+  37%, 63% {
+    background-image: 
+      linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)),
+      var(--bg2);
+    background-position: center;
+  }
+  64%, 66% {
+    background-image: 
+      linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0)),
+      var(--bg2);
+  }
+  67%, 69% {
+    background-image: 
+      linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0)),
+      var(--bg3);
+    background-position: 10% center;
+  }
+  70%, 100% {
+    background-image: 
+      linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)),
+      var(--bg3);
+    background-position: center;
+  }
+}
+
+/* footer section */
+#footer-section {
+  margin-top: auto;
+}
