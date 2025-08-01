@@ -75,20 +75,26 @@ node server.js
 API runs at: http://localhost:5000/api
 
 #### 🗂️ Backend .env
+```env
+# This line is a comment and will not be parsed
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 PORT=5000
+
 # vercel cron job
 CRON_SECRET=your_cron_secret
+
 # for admin seed
 ADMIN_EMAIL=admin@example.com
 ADMIN_PASSWORD=admin123
 ADMIN_NAME=Admin
+
 # for exercise seed
 EXERCISE_DATA=[
   {"name":"Running (6 mph)","caloriesPerMin":10},
   {"name":"Cycling (moderate)","caloriesPerMin":8}
 ]
+```
 
 
 ## 📁 File Structure
