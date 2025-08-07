@@ -9,7 +9,7 @@ const {
 // @access  Private (Cron Job only)
 
 // Secure endpoint for cron jobs only
-// vercel cron jobs always uses GET so dont use POST.
+// vercel always uses get so dont use post.
 router.get('/seed-workouts', (req, res, next) => {
     if (req.query.secret !== process.env.CRON_SECRET) {
         return res.status(403).json({ error: 'Forbidden: Invalid cron token' });
