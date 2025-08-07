@@ -14,8 +14,11 @@
   ],
   "crons": [
     {
-      "path": "/api/demo-data/seed-workouts?secret=96ff67f519c392742478e7ddba7440369a01ea1f930693a466e23433976358b5",
-      "schedule": "0 9 * * *"
+      "path": "/api/demo-data/seed-workouts",
+      "schedule": "0 9 * * *",
+      "headers": {
+        "X-Cron-Secret": "placeholder"
+      }
     }
   ]
 }
