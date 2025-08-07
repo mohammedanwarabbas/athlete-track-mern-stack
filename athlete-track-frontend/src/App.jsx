@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import "./assets/styles/global.css";
 // pages
 import Navbar from "./components/layout/Navbar";
@@ -40,9 +40,9 @@ function App() {
             element={
               user ? (
                 user.role === "admin" ? (
-                  <AdminDashboard />
+                  <Navigate to="/admin/dashboard" replace />
                 ) : (
-                  <AthleteDashboard />
+                  <Navigate to="/athlete/dashboard" replace />
                 )
               ) : (
                 <Home />
